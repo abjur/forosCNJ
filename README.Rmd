@@ -1,0 +1,57 @@
+---
+output: github_document
+---
+# Foros CNJ 
+
+Objetivo desse pacote é disponibilizar Scripts e Documentação do projeto de levantamento das comarcas e códicos do Brasil, 
+considerando a disposição da Resolução Nº 65 de 16/12/2008, dispõe sobre a uniformização do número dos processos nos órgãos do 
+Poder Judiciário e dá outras providências, favorecendo consulta processual. 
+Observado a estrutura NNNNNNN-DD.AAAA.J.TR.OOOO, n° composto por seis campos Obrigatórios. 
+Os dados foram coletados através dos anexos do [Conselho Nacional de Justiça] (https://www.cnj.jus.br/programas-e-acoes/numeracao-unica/documentos/). 
+Inclui-se Supremo Tribunal Federal, Conselho Nacional de Justiça, Superior Tribunal de Justiça, Justiça Federal,
+Justiça do Trabalho, Justiça Eleitoral, Justiça Militar da União, Justiça Estadual, Justiça Militar Estadual. 
+Voce pode ler sobre a Resolução N° 65/08 [aqui] (https://atos.cnj.jus.br/atos/detalhar/119). 
+
+
+## Instalação
+
+A versão em desenvolvimento de ForosCNJ pose ser acessada a partir da instalação do pacote: 
+
+``` r
+remotes::install_github("abjur/foroCNJ")
+```
+
+## Exemplos
+
+Segue abaixo exemplos para o uso do pacote: 
+
+### Exemplo das Bases disponíveis 
+
+
+```{r examplebases}
+library(forosCNJ)
+dplyr::glimpse(da_foro)
+```
+### Exemplo de Tabela
+
+```{r exampletabela}
+da_foro_comarca %>% 
+  dplyr::arrange(comarca) %>% 
+  head(10) %>% 
+  knitr::kable()
+```
+### Exemplo de Gráfico
+
+#### Gráfico de quantidade de Tribunais da Justiça federal por Siglas
+
+``` {r exampletagrafico}
+library(ggplot2)
+da_foro_comarca %>%
+  dplyr::filter(id_justica == 4) %>% 
+  ggplot() +
+  geom_bar(aes(x = sigla, fill = id_justica))+
+  theme_minimal()+
+   labs(x = "Tribunais da Justiça Federal", y = "Quantidade")
+
+```
+

@@ -1,5 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+.Rbuildignore
+
 data-raw/rds/paginas
 data-raw/html
