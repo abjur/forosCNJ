@@ -1,13 +1,27 @@
+Type: Package
 Package: forosCNJ
-Title: What the Package Does (One Line, Title Case)
+Title: Useful tools for analysis of CNJ standard numbers 
+Used by the
+    Brazilian Jurimetrics Association 
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    c(person(given = "Julio",
+           family = "Trecenti",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "julio.trecenti@gmail.com"),
+      person(given = "Katerine",
+             family = "Witkoski",
+             role = c("aut"),
+             email = "kwitkoski@abj.org.br",
+            comment = c(ORCID = "0000-0002-1680-6389")),
+      person(given = "Associação Brasileira de Jurimetria",
+             role = c("cph", "fnd")))     
+Description:The Brazilian Jurimetrics Association (ABJ in
+    Portuguese, see https://abj.org.br/ for more information) is
+    a non-profit organization which aims to investigate and promote the
+    use of statistics and probability in the study of Law and its
+    institutions. This package makes available the survey of the 
+judicial district and codes of Brazil
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
