@@ -18,7 +18,7 @@ Voce pode ler sobre a Resolução N° 65/08 [aqui] (https://atos.cnj.jus.br/atos
 A versão em desenvolvimento de ForosCNJ pose ser acessada a partir da instalação do pacote: 
 
 ``` r
-remotes::install_github("abjur/foroCNJ")
+devtools::install_github("abjur/forosCNJ")
 ```
 
 ## Exemplos
@@ -55,3 +55,4 @@ da_foro_comarca %>%
 
 ```
 
+l
