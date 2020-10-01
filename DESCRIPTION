@@ -19,7 +19,7 @@ Description: The Brazilian Jurimetrics Association (ABJ in
     a non-profit organization which aims to investigate and promote the
     use of statistics and probability in the study of Law and its
     institutions. This package makes available the survey of the 
-judicial district and codes of Brazil
+    judicial district and codes of Brazil
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
