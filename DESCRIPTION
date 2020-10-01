@@ -1,8 +1,6 @@
 Type: Package
 Package: forosCNJ
-Title: Useful tools for analysis of CNJ standard numbers 
-Used by the
-    Brazilian Jurimetrics Association 
+Title: Useful Tools For Analysis Of CNJ Standard Numbers Used By The Brazilian Jurimetrics Association 
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Julio",
@@ -16,7 +14,7 @@ Authors@R:
             comment = c(ORCID = "0000-0002-1680-6389")),
       person(given = "Associação Brasileira de Jurimetria",
              role = c("cph", "fnd")))     
-Description:The Brazilian Jurimetrics Association (ABJ in
+Description: The Brazilian Jurimetrics Association (ABJ in
     Portuguese, see https://abj.org.br/ for more information) is
     a non-profit organization which aims to investigate and promote the
     use of statistics and probability in the study of Law and its
