@@ -74,15 +74,14 @@
 <div id="foros-cnj" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#foros-cnj" class="anchor"></a>Foros CNJ</h1></div>
-<p>O objetivo do <a href="https://github.com/abjur/forosCNJ">forosCNJ</a> é disponibilizar bases de dados e documentação do projeto de levantamento das comarcas e códigos do Brasil, considerando o disposto na <a href="https://atos.cnj.jus.br/atos/detalhar/119">Resolução Nº 65/2008 do CNJ</a>, que trata da uniformização do número dos processos nos órgãos do Poder Judiciário e dá outras providências, favorecendo a consulta processual.</p>
+<p>O objetivo do <code>{forosCNJ}</code> é disponibilizar bases de dados e documentação do projeto de levantamento das comarcas e códigos do Brasil, considerando o disposto na <a href="https://atos.cnj.jus.br/atos/detalhar/119">Resolução Nº 65/2008 do CNJ</a>, que trata da uniformização do número dos processos nos órgãos do Poder Judiciário e dá outras providências, favorecendo a consulta processual.</p>
 <p>O número CNJ possui a estrutura NNNNNNN-DD.AAAA.J.TR.OOOO, composto por seis campos obrigatórios.</p>
 <p>Os dados foram coletados através dos anexos do <a href="https://www.cnj.jus.br/programas-e-acoes/numeracao-unica/documentos/">Conselho Nacional de Justiça</a>. Inclui-se Supremo Tribunal Federal, Conselho Nacional de Justiça, Superior Tribunal de Justiça, Justiça Federal, Justiça do Trabalho, Justiça Eleitoral, Justiça Militar da União, Justiça Estadual, Justiça Militar Estadual.</p>
 <div id="instalação" class="section level2">
 <h2 class="hasAnchor">
 <a href="#instala%C3%A7%C3%A3o" class="anchor"></a>Instalação</h2>
-<p>A versão de desenvolvimento de <a href="https://github.com/abjur/forosCNJ">forosCNJ</a> pode ser instalada a partir do código:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"abjur/forosCNJ"</span><span class="op">)</span></pre></div>
+<p>A versão de desenvolvimento de <code>{forosCNJ}</code> pode ser instalada a partir do código:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"abjur/forosCNJ"</span>)</span></code></pre></div>
 </div>
 <div id="exemplos" class="section level2">
 <h2 class="hasAnchor">
@@ -91,37 +90,25 @@
 <div id="exemplo-das-bases-disponíveis" class="section level3">
 <h3 class="hasAnchor">
 <a href="#exemplo-das-bases-dispon%C3%ADveis" class="anchor"></a>Exemplo das Bases disponíveis</h3>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/abjur/forosCNJ">forosCNJ</a></span><span class="op">)</span>
-<span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">da_foro</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">## Rows: 7,955</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co">## Columns: 5</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co">## $ id_justica  &lt;chr&gt; "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8…</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="co">## $ id_tribunal &lt;chr&gt; "26", "26", "26", "26", "26", "26", "26", "26", "26", "26…</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">## $ id_foro     &lt;chr&gt; "0000", "0001", "0002", "0003", "0004", "0005", "0006", "…</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="co">## $ comarca     &lt;chr&gt; "São Paulo", "São Paulo", "São Paulo", "São Paulo", "São …</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="co">## $ descricao   &lt;chr&gt; "Foro Unificado", "Foro Regional I - Santana", "Foro Regi…</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">library</span>(forosCNJ)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>dplyr<span class="op">::</span><span class="kw">glimpse</span>(da_foro)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co">#&gt; Rows: 7,955</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="co">#&gt; Columns: 5</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="co">#&gt; $ id_justica  &lt;chr&gt; "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8…</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="co">#&gt; $ id_tribunal &lt;chr&gt; "26", "26", "26", "26", "26", "26", "26", "26", "26", "26…</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co">#&gt; $ id_foro     &lt;chr&gt; "0000", "0001", "0002", "0003", "0004", "0005", "0006", "…</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co">#&gt; $ comarca     &lt;chr&gt; "São Paulo", "São Paulo", "São Paulo", "São Paulo", "São …</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="co">#&gt; $ descricao   &lt;chr&gt; "Foro Unificado", "Foro Regional I - Santana", "Foro Regi…</span></span></code></pre></div>
 </div>
 <div id="exemplo-de-tabela" class="section level3">
 <h3 class="hasAnchor">
 <a href="#exemplo-de-tabela" class="anchor"></a>Exemplo de Tabela</h3>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="va">da_foro_comarca</span> <span class="op">%&gt;%</span> 
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">comarca</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">id_justica</span> <span class="op">==</span> <span class="fl">8</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_n</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>da_foro_comarca <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">arrange</span>(comarca) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(id_justica <span class="op">==</span><span class="st"> </span><span class="dv">8</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">sample_n</span>(<span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>()</span></code></pre></div>
 <table class="table">
-<colgroup>
-<col width="10%">
-<col width="11%">
-<col width="7%">
-<col width="21%">
-<col width="32%">
-<col width="4%">
-<col width="1%">
-<col width="6%">
-</colgroup>
 <thead><tr class="header">
 <th align="left">id_justica</th>
 <th align="left">id_tribunal</th>
@@ -135,103 +122,103 @@
 <tbody>
 <tr class="odd">
 <td align="left">8</td>
-<td align="left">05</td>
-<td align="left">0154</td>
-<td align="left">LUIS EDUARDO MAGALHAES</td>
-<td align="left">Comarca de Luis Eduardo Magalhães</td>
-<td align="left">TJBA</td>
-<td align="left">BA</td>
-<td align="left">2919553</td>
+<td align="left">14</td>
+<td align="left">0089</td>
+<td align="left">MELGACO</td>
+<td align="left">Melgado</td>
+<td align="left">TJPA</td>
+<td align="left">PA</td>
+<td align="left">1504505</td>
 </tr>
 <tr class="even">
 <td align="left">8</td>
-<td align="left">17</td>
-<td align="left">0140</td>
-<td align="left">AGUA PRETA</td>
-<td align="left">Agua Preta</td>
-<td align="left">TJPE</td>
-<td align="left">PE</td>
-<td align="left">2600401</td>
+<td align="left">11</td>
+<td align="left">0086</td>
+<td align="left">NOVA MUTUM</td>
+<td align="left">Comarca de Nova Mutum</td>
+<td align="left">TJMT</td>
+<td align="left">MT</td>
+<td align="left">5106224</td>
 </tr>
 <tr class="odd">
-<td align="left">8</td>
-<td align="left">10</td>
-<td align="left">0114</td>
-<td align="left">RIACHAO</td>
-<td align="left">Fórum da Comarca</td>
-<td align="left">TJMA</td>
-<td align="left">MA</td>
-<td align="left">2109502</td>
-</tr>
-<tr class="even">
-<td align="left">8</td>
-<td align="left">13</td>
-<td align="left">0183</td>
-<td align="left">CONSELHEIRO LAFAIETE</td>
-<td align="left">Conselheiro Lafaiete</td>
-<td align="left">TJMG</td>
-<td align="left">MG</td>
-<td align="left">3118304</td>
-</tr>
-<tr class="odd">
-<td align="left">8</td>
-<td align="left">26</td>
-<td align="left">0146</td>
-<td align="left">CORDEIROPOLIS</td>
-<td align="left">Foro de Cordeirópolis</td>
-<td align="left">TJSP</td>
-<td align="left">SP</td>
-<td align="left">3512407</td>
-</tr>
-<tr class="even">
 <td align="left">8</td>
 <td align="left">15</td>
-<td align="left">0831</td>
-<td align="left">CACIMBA DE DENTRO</td>
-<td align="left">Dentro</td>
+<td align="left">9003</td>
+<td align="left">JOAO PESSOA</td>
+<td align="left">3ª Turma Recursal de João Pessoa</td>
 <td align="left">TJPB</td>
 <td align="left">PB</td>
-<td align="left">2503506</td>
-</tr>
-<tr class="odd">
-<td align="left">8</td>
-<td align="left">14</td>
-<td align="left">0136</td>
-<td align="left">CANAA DOS CARAJAS</td>
-<td align="left">Canaa dos Carajas</td>
-<td align="left">TJPA</td>
-<td align="left">PA</td>
-<td align="left">1502152</td>
+<td align="left">2507507</td>
 </tr>
 <tr class="even">
 <td align="left">8</td>
-<td align="left">13</td>
-<td align="left">0248</td>
-<td align="left">ESTRELA DO SUL</td>
-<td align="left">Estrela do Sul</td>
-<td align="left">TJMG</td>
-<td align="left">MG</td>
-<td align="left">3124807</td>
+<td align="left">18</td>
+<td align="left">0068</td>
+<td align="left">PORTO</td>
+<td align="left">Porto</td>
+<td align="left">TJPI</td>
+<td align="left">PI</td>
+<td align="left">2208502</td>
 </tr>
 <tr class="odd">
 <td align="left">8</td>
-<td align="left">14</td>
-<td align="left">0003</td>
-<td align="left">ALENQUER</td>
-<td align="left">Alenquer</td>
-<td align="left">TJPA</td>
-<td align="left">PA</td>
-<td align="left">1500404</td>
+<td align="left">15</td>
+<td align="left">0501</td>
+<td align="left">SAO MAMEDE</td>
+<td align="left">São Mamede</td>
+<td align="left">TJPB</td>
+<td align="left">PB</td>
+<td align="left">2514909</td>
 </tr>
 <tr class="even">
 <td align="left">8</td>
-<td align="left">13</td>
-<td align="left">0116</td>
-<td align="left">CAMPOS GERAIS</td>
-<td align="left">Campos Gerais</td>
-<td align="left">TJMG</td>
-<td align="left">MG</td>
-<td align="left">3111606</td>
+<td align="left">06</td>
+<td align="left">0153</td>
+<td align="left">QUIXELO</td>
+<td align="left">Comarca de Quixelô</td>
+<td align="left">TJCE</td>
+<td align="left">CE</td>
+<td align="left">2311355</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="left">05</td>
+<td align="left">0117</td>
+<td align="left">ITAGIBA</td>
+<td align="left">Comarca de Itagibá</td>
+<td align="left">TJBA</td>
+<td align="left">BA</td>
+<td align="left">2915205</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">21</td>
+<td align="left">0056</td>
+<td align="left">JULIO DE CASTILHOS</td>
+<td align="left">Foro de Julio Castilhos</td>
+<td align="left">TJRS</td>
+<td align="left">RS</td>
+<td align="left">4311205</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="left">12</td>
+<td align="left">0007</td>
+<td align="left">CASSILANDIA</td>
+<td align="left">Comarca de Cassilândia</td>
+<td align="left">TJMS</td>
+<td align="left">MS</td>
+<td align="left">5002902</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">06</td>
+<td align="left">0209</td>
+<td align="left">POTENGI</td>
+<td align="left">Comarca Vinculada de Potengi</td>
+<td align="left">TJCE</td>
+<td align="left">CE</td>
+<td align="left">2311207</td>
 </tr>
 </tbody>
 </table>
@@ -242,19 +229,18 @@
 <div id="gráfico-de-quantidade-de-tribunais-da-justiça-federal-por-siglas" class="section level4">
 <h4 class="hasAnchor">
 <a href="#gr%C3%A1fico-de-quantidade-de-tribunais-da-justi%C3%A7a-federal-por-siglas" class="anchor"></a>Gráfico de quantidade de Tribunais da Justiça federal por Siglas</h4>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-
-<span class="va">da_foro_comarca</span> <span class="op">%&gt;%</span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">id_justica</span> <span class="op">==</span> <span class="fl">4</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sigla</span><span class="op">)</span>, fill <span class="op">=</span> <span class="fu">viridis</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/viridisLite/man/viridis.html">viridis</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">.2</span>, <span class="fl">.8</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="fl">14</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>
-    x <span class="op">=</span> <span class="st">"Tribunal Regional Federal"</span>, 
-    y <span class="op">=</span> <span class="st">"Quantidade de códigos de foro"</span>
-  <span class="op">)</span></pre></div>
-<p><img src="README_files/figure-gfm/exampletagrafico-1.png"><!-- --></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>da_foro_comarca <span class="op">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(id_justica <span class="op">==</span><span class="st"> </span><span class="dv">4</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">x =</span> sigla), <span class="dt">fill =</span> viridis<span class="op">::</span><span class="kw">viridis</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">.2</span>, <span class="fl">.8</span>)) <span class="op">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">theme_minimal</span>(<span class="dv">14</span>) <span class="op">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>    <span class="dt">x =</span> <span class="st">"Tribunal Regional Federal"</span>, </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>    <span class="dt">y =</span> <span class="st">"Quantidade de códigos de foro"</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>  )</span></code></pre></div>
+<p><img src="reference/figures/exampletagrafico-1.png" width="100%"></p>
 </div>
 </div>
 </div>
@@ -296,7 +282,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>
