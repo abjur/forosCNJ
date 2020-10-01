@@ -4,7 +4,7 @@ output: github_document
 
 # Foros CNJ 
 
-O objetivo do `{forosCNJ}` é disponibilizar bases de dados e documentação do projeto de levantamento das comarcas e códigos do Brasil, considerando o disposto na [Resolução Nº 65/2008 do CNJ](https://atos.cnj.jus.br/atos/detalhar/119), que trada da uniformização do número dos processos nos órgãos do  Poder Judiciário e dá outras providências, favorecendo a consulta processual. 
+O objetivo do `{forosCNJ}` é disponibilizar bases de dados e documentação do projeto de levantamento das comarcas e códigos do Brasil, considerando o disposto na [Resolução Nº 65/2008 do CNJ](https://atos.cnj.jus.br/atos/detalhar/119), que trata da uniformização do número dos processos nos órgãos do  Poder Judiciário e dá outras providências, favorecendo a consulta processual. 
 
 O número CNJ possui a estrutura NNNNNNN-DD.AAAA.J.TR.OOOO, composto por seis campos obrigatórios. 
 
