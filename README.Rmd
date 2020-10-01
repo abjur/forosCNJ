@@ -56,5 +56,3 @@ da_foro_comarca %>%
     y = "Quantidade de códigos de foro"
   )
 ```
-
-l
