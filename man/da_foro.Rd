@@ -3,14 +3,25 @@
 \docType{data}
 \name{da_foro}
 \alias{da_foro}
-\title{da_foro}
+\title{Classficacao de foros e comarcas.}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7955 rows and 5 columns.
+um data frame com 7955 linhas and 5 variaveis:
+\describe{
+\item{id_justica}{numero de classificacao}
+\item{id_tribunal}{classicacao pela da_justica}
+\item{id_foro}{numero do respectivo foro}
+\item{comarca}{comarca do respectivo foro}
+\item{descricao}{foro}
+}
+}
+\source{
+\url{https://www.cnj.jus.br/programas-e-acoes/numeracao-unica/documentos/}
 }
 \usage{
 da_foro
 }
 \description{
-da_foro
+Um conjunto de dados que contem todos os foros e comarcas
+classificado pelo orgao e tribunal.
 }
 \keyword{datasets}

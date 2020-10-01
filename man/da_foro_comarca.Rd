@@ -3,14 +3,28 @@
 \docType{data}
 \name{da_foro_comarca}
 \alias{da_foro_comarca}
-\title{da_foro_comarca}
+\title{Classficacao de foros, comarcas e o nº do IBGE.}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7955 rows and 8 columns.
+um data frame com 7955 linhas and 8 variaveis:
+\describe{
+\item{id_justica}{numero de classificacao}
+\item{id_tribunal}{classicacao pela da_justica}
+\item{id_foro}{numero id do respectivo foro}
+\item{comarca}{comarca do respectivo foro}
+\item{descricao}{foro}
+\item{sigla}{sigla do respectivo tribunal}
+\item{uf}{estado do respectivo foto}
+\item{ibge}{numero do ibge do respectivo foro}
+}
+}
+\source{
+\url{https://www.cnj.jus.br/programas-e-acoes/numeracao-unica/documentos/}
 }
 \usage{
 da_foro_comarca
 }
 \description{
-da_foro_comarca
+Um conjunto de dados que contem todos os foros e comarcas
+classificado pelo orgao, tribunal e o nº do IBGE.
 }
 \keyword{datasets}

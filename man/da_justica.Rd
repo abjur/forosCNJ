@@ -3,14 +3,22 @@
 \docType{data}
 \name{da_justica}
 \alias{da_justica}
-\title{da_justica}
+\title{Classificacao de orgao ou segmento do poder judiciario.}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 9 rows and 2 columns.
+um data frame com 9 linhas and 2 variaveis:
+\describe{
+\item{id_justica}{numero de classificacao}
+\item{descricao}{orgao ou segmento judiciario}
+}
+}
+\source{
+\url{https://www.cnj.jus.br/programas-e-acoes/numeracao-unica/documentos/}
 }
 \usage{
 da_justica
 }
 \description{
-da_justica
+Um conjunto de dados que contem os orgaos e segmentos do poder
+judiciario de 1:9.
 }
 \keyword{datasets}

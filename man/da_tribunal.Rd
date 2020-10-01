@@ -3,14 +3,26 @@
 \docType{data}
 \name{da_tribunal}
 \alias{da_tribunal}
-\title{da_tribunal}
+\title{Levantamento dos Tribunais.}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 106 rows and 5 columns.
+um data frame com 106 linhas and 5 variaveis:
+\describe{
+\item{id_justica}{numero de classificacao}
+\item{id_tribunal}{classicacao pela da_justica}
+\item{descricao}{tribunal}
+\item{sigla}{sigla do respectivo tribunal}
+\item{uf}{estado do respectivo tribunal}
+}
+}
+\source{
+\url{https://www.cnj.jus.br/programas-e-acoes/numeracao-unica/documentos/}
 }
 \usage{
 da_tribunal
 }
 \description{
-da_tribunal
+Um conjunto de dados que contem os Tribunais Federais, Estaduais,
+e do Distrito Federal e Territórios, Tribuais Regional eleitoral
+e Tribunais Regionais do Trabalho.
 }
 \keyword{datasets}
