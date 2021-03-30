@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 ```
 
 
-# Foros CNJ 
+# forosCNJ <img src='man/figures/logo.png' align="right" height="138" />
 
 O objetivo do `{forosCNJ}` é disponibilizar bases de dados e documentação do projeto de levantamento das comarcas e códigos do Brasil, considerando o disposto na [Resolução Nº 65/2008 do CNJ](https://atos.cnj.jus.br/atos/detalhar/119), que trata da uniformização do número dos processos nos órgãos do  Poder Judiciário e dá outras providências, favorecendo a consulta processual. 
 
@@ -54,7 +54,7 @@ da_foro_comarca %>%
 
 #### Gráfico de quantidade de Tribunais da Justiça federal por Siglas
 
-``` {r exampletagrafico}
+``` {r exampletagrafico, dpi = 300}
 library(ggplot2)
 
 da_foro_comarca %>%
